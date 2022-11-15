@@ -27,7 +27,24 @@ function adicionaLinha() {
     linha += `<td>${inputNomeAtividade.value}</td>`;
     linha += `<td>${inputNotaAtividade.value}</td>`;
     linha += `<td>${
-      inputNotaAtividade.value >= notaMinima ? imgAprovado : gitL =
+      inputNotaAtividade.value >= notaMinima ? imgAprovado : imgReprovado
+    }</td>`;
+    linha += "</tr>";
+    linhas += linha;
+  }
+  inputNomeAtividade.value = "";
+  inputNotaAtividade.value = "";
+}
+
+function atualizaTable() {
+  const corpoTabela = document.querySelector("tbody");
+  corpoTabela.innerHTML = linhas;
+}
+
+function atualizaMediaFinal() {
+  const mediaFinal = calculaMediaFinal();
+  document.querySelector("#media-final").innerHTML = mediaFinal;
+  document.querySelector("#media-final-resultado").innerHTML =
     mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
 }
 
