@@ -43,7 +43,7 @@ form {
 form button {
   background-color: rgb(8, 123, 37);
   color: #ffffff;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   border: none;
   cursor: pointer;
@@ -51,7 +51,7 @@ form button {
 }
 
 form input {
-  font-size: 24px;
+  font-size: 18px;
   background-color: #ffffff;
   border: none;
   border-bottom: 2px solid black;

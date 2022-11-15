@@ -6,7 +6,7 @@ const arrAtividades = [];
 const arrNotas = [];
 const spanAprovado = `<span class="resultado aprovado">Aprovado</span>`;
 const spanReprovado = `<span class="resultado reprovado">Reprovado</span>`;
-const notaMinima= parseFloat(prompt("Digite a nota minima!"));
+//const notaMinima= parseFloat(prompt("Digite a nota minima!"));
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -43,7 +43,7 @@ function atualizaTable() {
 
 function atualizaMediaFinal() {
   const mediaFinal = calculaMediaFinal();
-  document.querySelector("#media-final").innerHTML = mediaFinal;
+  document.querySelector("#media-final").innerHTML = mediaFinal.toFixed(2);
   document.querySelector("#media-final-resultado").innerHTML =
     mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
 }
